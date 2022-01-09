@@ -43,11 +43,14 @@ namespace AddressBookTrail
                         break;
                     case 3:
 <<<<<<< HEAD
+<<<<<<< HEAD
                         addressBook.EditContact();
                         break;
                     case 4:
                         addressBook.DeleteContact();
 =======
+=======
+>>>>>>> UC4-Delete-Contacts
                         Console.WriteLine("Enter First Name of the Contact you want to edit:");
                         string personName = Console.ReadLine();
                         addressBook.EditContact(personName);
@@ -56,7 +59,10 @@ namespace AddressBookTrail
                         Console.WriteLine("Enter First Name of the Contact you want to Delete:");
                         string name = Console.ReadLine();
                         addressBook.DeleteContact(name);
+<<<<<<< HEAD
 >>>>>>> UC5-AddMultiple-Contacts
+=======
+>>>>>>> UC4-Delete-Contacts
                         break;
                     case 5:
                         return;
@@ -65,10 +71,14 @@ namespace AddressBookTrail
                         break;
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Console.WriteLine("=================================\nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
 =======
                 Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
 >>>>>>> UC5-AddMultiple-Contacts
+=======
+                Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
+>>>>>>> UC4-Delete-Contacts
                 userInput = Convert.ToInt32(Console.ReadLine());
             }
         }

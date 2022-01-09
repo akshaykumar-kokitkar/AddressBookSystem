@@ -6,7 +6,8 @@ namespace AddressBookTrail
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose the operation:\n1.Add Contact.\n2.View Contact Info.\n3.Exit Adress Book Application.");
+            Console.WriteLine("Hello! Welcome to Address Book.");
+            Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Duplicate Checker.\n6.Exit Adress Book Application.\n=================================");
             int userInput = Convert.ToInt32(Console.ReadLine());
             var addressBook = new AddressBook();
 
@@ -27,12 +28,15 @@ namespace AddressBookTrail
                         addressBook.DeleteContact();
                         break;
                     case 5:
+                        addressBook.DuplicateChecker();
+                        break;
+                    case 6:
                         return;
                     default:
                         Console.WriteLine("!!! Choose valid operation !!!");
                         break;
                 }
-                Console.WriteLine("=================================\nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
+                Console.WriteLine("=================================\nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Duplicate Checker.\n6.Exit Address Book Application \n=================================");
                 userInput = Convert.ToInt32(Console.ReadLine());
             }
         }

@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ak\\Desktop\\BridgeLabz Project\\AddressBookSystem\\AddressBookSystem\\AddressBookSystem.csproj",
-      "projectName": "AddressBookSystem",
-      "projectPath": "C:\\Users\\ak\\Desktop\\BridgeLabz Project\\AddressBookSystem\\AddressBookSystem\\AddressBookSystem.csproj",
+      "projectUniqueName": "C:\\Users\\ak\\Desktop\\BridgeLabz Project\\AddressBookSystem\\AddressBookSystem\\AddressBookTrail.csproj",
+      "projectName": "AddressBookTrail",
+      "projectPath": "C:\\Users\\ak\\Desktop\\BridgeLabz Project\\AddressBookSystem\\AddressBookSystem\\AddressBookTrail.csproj",
       "packagesPath": "C:\\Users\\ak\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ak\\Desktop\\BridgeLabz Project\\AddressBookSystem\\AddressBookSystem\\obj\\",
       "projectStyle": "PackageReference",

@@ -14,52 +14,85 @@ namespace AddressBookTrail
             List.Add(contact);
         }
 
+        public Dictionary<string, Contact> DictName = new Dictionary<string, Contact>();
+
+        public void StoreContact()
+        {
+            Console.WriteLine("Enter a unique name to your Addressbook:");
+            string addressbookName = Console.ReadLine();
+            Console.WriteLine("First Name:");
+            string firstname = Console.ReadLine();
+            Console.WriteLine("Last Name:");
+            string lastname = Console.ReadLine();
+            Console.WriteLine("Address:");
+            string address = Console.ReadLine();
+            Console.WriteLine("City:");
+            string city = Console.ReadLine();
+            Console.WriteLine("State:");
+            string state = Console.ReadLine();
+            Console.WriteLine("Zip Code:");
+            string zipcode = Console.ReadLine();
+            Console.WriteLine("Phone Number:");
+            string phonenumber = Console.ReadLine();
+            Console.WriteLine("Email:");
+            string email = Console.ReadLine();
+            var newContact = new Contact(firstname, lastname, address, city, state, zipcode, phonenumber, email);
+            DictName.Add(addressbookName, newContact);
+        }
         public void DisplayAllContact()
         {
-            foreach (var contact in List)
+            foreach (var element in DictName)
             {
-                Console.WriteLine(contact.FirstName + contact.LastName + "\nAddress: " + contact.Address + "\nCity: " + contact.City + "\nState: " + contact.State + "\nZip Code: " + contact.ZipCode + "\nPhone Number: " + contact.PhoneNumber + "\nEmail: " + contact.Email);
-
+                Console.WriteLine("----------------\nADDRESSBOOK :\n----------------\nAddressbook Key: " + element.Key + "\nPerson's Name: " + element.Value.FirstName + " " + element.Value.LastName + "\nAddress: " + element.Value.Address + "\nCity: " + element.Value.City + "\nState: " + element.Value.State + "\nZip Code: " + element.Value.ZipCode + "\nPhone Number: " + element.Value.PhoneNumber + "\nEmail: " + element.Value.Email);
             }
         }
-
-        public void EditContact(string Name)
+        public void EditContact()
         {
-            foreach (var contact in List)
+            Console.WriteLine("Available Addressbooks are:: ");
+            foreach (var key in DictName)
             {
-                if (contact.FirstName == Name)
+                Console.WriteLine(key.Key + "\n----------------");
+            }
+            Console.WriteLine("------------------\nEnter Name of the AddressBook you want to edit:: ");
+            string dictName = Console.ReadLine();
+
+            foreach (var element in DictName)
+            {
+                if (element.Key == dictName)
                 {
                     Console.WriteLine("Enter new First Name");
                     string newFirstName = Console.ReadLine();
-                    contact.FirstName = newFirstName;
+                    element.Value.FirstName = newFirstName;
                     Console.WriteLine("Enter new Last Name:");
                     string newLastName = Console.ReadLine();
-                    contact.LastName = newLastName;
+                    element.Value.LastName = newLastName;
                     Console.WriteLine("Enter new Address:");
                     string newAddress = Console.ReadLine();
-                    contact.Address = newAddress;
+                    element.Value.Address = newAddress;
                     Console.WriteLine("Enter new City:");
                     string newCity = Console.ReadLine();
-                    contact.City = newCity;
+                    element.Value.City = newCity;
                     Console.WriteLine("Enter new State:");
                     string newState = Console.ReadLine();
-                    contact.State = newState;
+                    element.Value.State = newState;
                     Console.WriteLine("Enter new Zip Code:");
                     string newZipcode = Console.ReadLine();
-                    contact.ZipCode = newZipcode;
+                    element.Value.ZipCode = newZipcode;
                     Console.WriteLine("Enter new Phone Number:");
                     string newPhonenumber = Console.ReadLine();
-                    contact.PhoneNumber = newPhonenumber;
+                    element.Value.PhoneNumber = newPhonenumber;
                     Console.WriteLine("Enter new Email:");
                     string newEmail = Console.ReadLine();
-                    contact.Email = newEmail;
-                    Console.WriteLine("--------------------------------------------");
+                    element.Value.Email = newEmail;
+                    Console.WriteLine("---------------------------------\n!!Contact Edited!!");
                 }
             }
-        }
 
-        public void DeleteContact(string name)
+        }
+        public void DeleteContact()
         {
+            Console.WriteLine("Enter First Name of the Contact you want to Delete:");
+            string name = Console.ReadLine();
             foreach (var contact in List)
             {
                 if (contact.FirstName == name)
@@ -69,7 +102,7 @@ namespace AddressBookTrail
                     break;
                 }
             }
-        }
 
+        }
     }
 }

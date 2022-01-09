@@ -44,6 +44,7 @@ namespace AddressBookTrail
                     case 3:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         addressBook.EditContact();
                         break;
                     case 4:
@@ -51,11 +52,14 @@ namespace AddressBookTrail
 =======
 =======
 >>>>>>> UC4-Delete-Contacts
+=======
+>>>>>>> UC3-Edit-Contacts
                         Console.WriteLine("Enter First Name of the Contact you want to edit:");
                         string personName = Console.ReadLine();
                         addressBook.EditContact(personName);
                         break;
                     case 4:
+<<<<<<< HEAD
                         Console.WriteLine("Enter First Name of the Contact you want to Delete:");
                         string name = Console.ReadLine();
                         addressBook.DeleteContact(name);
@@ -65,11 +69,14 @@ namespace AddressBookTrail
 >>>>>>> UC4-Delete-Contacts
                         break;
                     case 5:
+=======
+>>>>>>> UC3-Edit-Contacts
                         return;
                     default:
                         Console.WriteLine("!!! Choose valid operation !!!");
                         break;
                 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 Console.WriteLine("=================================\nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
@@ -79,6 +86,9 @@ namespace AddressBookTrail
 =======
                 Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
 >>>>>>> UC4-Delete-Contacts
+=======
+                Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Exit Adress Book Application.\n=================================");
+>>>>>>> UC3-Edit-Contacts
                 userInput = Convert.ToInt32(Console.ReadLine());
             }
         }

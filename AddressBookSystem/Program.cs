@@ -16,7 +16,7 @@ namespace AddressBookTrail
                 {
                     case 1:
                         Console.WriteLine("First Name:");
-                        string firstname = (Console.ReadLine());
+                        string firstname = Console.ReadLine();
                         Console.WriteLine("Last Name:");
                         string lastname = Console.ReadLine();
                         Console.WriteLine("Address:");
@@ -38,13 +38,23 @@ namespace AddressBookTrail
                         addressBook.DisplayAllContact();
                         break;
                     case 3:
+                        Console.WriteLine("Enter First Name of the Contact you want to edit:");
+                        string personName = Console.ReadLine();
+                        addressBook.EditContact(personName);
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter First Name of the Contact you want to Delete:");
+                        string name = Console.ReadLine();
+                        addressBook.DeleteContact(name);
+                        break;
+                    case 5:
                         return;
                     default:
-                        Console.WriteLine("Choose valid operation.");
+                        Console.WriteLine("!!! Choose valid operation !!!");
                         break;
 
                 }
-                Console.WriteLine("Choose the operation:\n1.Add Contact.\n2.View Contact Info.\n3.Exit Adress Book Application.\n=================================");
+                Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Exit Adress Book Application.\n=================================");
                 userInput = Convert.ToInt32(Console.ReadLine());
             }
         }

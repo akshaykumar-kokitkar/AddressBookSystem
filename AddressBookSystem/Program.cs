@@ -6,7 +6,8 @@ namespace AddressBookTrail
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose the operation:\n1.Add Contact.\n2.View Contact Info.\n3.Exit Adress Book Application.");
+            Console.WriteLine("Hello! Welcome to Address Book.");
+            Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Duplicate Checker.\n6.Exit Adress Book Application.\n=================================");
             int userInput = Convert.ToInt32(Console.ReadLine());
             var addressBook = new AddressBook();
 
@@ -69,13 +70,20 @@ namespace AddressBookTrail
 >>>>>>> UC4-Delete-Contacts
                         break;
                     case 5:
+<<<<<<< HEAD
 =======
 >>>>>>> UC3-Edit-Contacts
+=======
+                        addressBook.DuplicateChecker();
+                        break;
+                    case 6:
+>>>>>>> UC7-Check-DuplicateEntry
                         return;
                     default:
                         Console.WriteLine("!!! Choose valid operation !!!");
                         break;
                 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +97,9 @@ namespace AddressBookTrail
 =======
                 Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Exit Adress Book Application.\n=================================");
 >>>>>>> UC3-Edit-Contacts
+=======
+                Console.WriteLine("=================================\nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Duplicate Checker.\n6.Exit Address Book Application \n=================================");
+>>>>>>> UC7-Check-DuplicateEntry
                 userInput = Convert.ToInt32(Console.ReadLine());
             }
         }

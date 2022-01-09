@@ -58,4 +58,18 @@ namespace AddressBookTrail
             }
         }
 
+        public void DeleteContact(string name)
+        {
+            foreach (var contact in List)
+            {
+                if (contact.FirstName == name)
+                {
+                    List.Remove(contact);
+                    Console.WriteLine("---------------------------------\n!!Contact Removed!!");
+                    break;
+                }
+            }
+        }
+
+    }
 }

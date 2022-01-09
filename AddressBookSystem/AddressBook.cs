@@ -160,5 +160,25 @@ namespace AddressBookTrail
                 }
             }
         }
+        public void SearchPerson()
+        {
+            Console.WriteLine("Enter City or State to search person::");
+            string city = Console.ReadLine();
+            foreach (var element in DictName)
+            {
+                if (element.Value.City.Equals(city))
+                {
+                    Console.WriteLine("Contact(s) in found in " + city + ":: " + element.Value.FirstName);
+                }
+                else if (element.Value.State.Equals(city))
+                {
+                    Console.WriteLine("Contact(s) in found in " + city + ":: " + element.Value.FirstName);
+                }
+                else
+                {
+                    Console.WriteLine("No such City or State stored in your addressbook.\nAvailable city and states are ::\n Cites:: " + element.Value.City + "\nStates:: " + element.Value.State);
+                }
+            }
+        }
     }
 }

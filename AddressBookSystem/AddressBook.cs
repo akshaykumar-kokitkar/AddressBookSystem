@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace AddressBookTrail
 {
     class AddressBook
     {
-        private List<Contact> List { get; set; } = new List<Contact>();
-        public void AddContact(Contact contact)
+        public List<Contact> List = new List<Contact>();
+        public void AddContact(Contact addcontact)
         {
-            List.Add(contact);
+            List.Add(addcontact);
         }
-
         public Dictionary<string, Contact> DictName = new Dictionary<string, Contact>();
 
         public void StoreContact()
@@ -43,23 +39,14 @@ namespace AddressBookTrail
         {
             foreach (var element in DictName)
             {
-<<<<<<< HEAD
                 Console.WriteLine("----------------\nADDRESSBOOK :\n----------------\nAddressbook Key: " + element.Key + "\nPerson's Name: " + element.Value.FirstName + " " + element.Value.LastName + "\nAddress: " + element.Value.Address + "\nCity: " + element.Value.City + "\nState: " + element.Value.State + "\nZip Code: " + element.Value.ZipCode + "\nPhone Number: " + element.Value.PhoneNumber + "\nEmail: " + element.Value.Email);
             }
         }
         public void EditContact()
-=======
-                Console.WriteLine("\n CONTACT :\n" + contact.FirstName + " " + contact.LastName + "\nAddress: " + contact.Address + "\nCity: " + contact.City + "\nState: " + contact.State + "\nZip Code: " + contact.ZipCode + "\nPhone Number: " + contact.PhoneNumber + "\nEmail: " + contact.Email);
-
-            }
-        }
-        public void EditContact(string personName)
->>>>>>> UC5-AddMultiple-Contacts
         {
             Console.WriteLine("Available Addressbooks are:: ");
             foreach (var key in DictName)
             {
-<<<<<<< HEAD
                 Console.WriteLine(key.Key + "\n----------------");
             }
             Console.WriteLine("------------------\nEnter Name of the AddressBook you want to edit:: ");
@@ -68,9 +55,6 @@ namespace AddressBookTrail
             foreach (var element in DictName)
             {
                 if (element.Key == dictName)
-=======
-                if (contact.FirstName == personName)
->>>>>>> UC5-AddMultiple-Contacts
                 {
                     Console.WriteLine("Enter new First Name");
                     string newFirstName = Console.ReadLine();
@@ -95,21 +79,13 @@ namespace AddressBookTrail
                     element.Value.PhoneNumber = newPhonenumber;
                     Console.WriteLine("Enter new Email:");
                     string newEmail = Console.ReadLine();
-<<<<<<< HEAD
                     element.Value.Email = newEmail;
-=======
-                    contact.Email = newEmail;
->>>>>>> UC5-AddMultiple-Contacts
                     Console.WriteLine("---------------------------------\n!!Contact Edited!!");
                 }
             }
 
         }
-<<<<<<< HEAD
         public void DeleteContact()
-=======
-        public void DeleteContact(string name)
->>>>>>> UC5-AddMultiple-Contacts
         {
             Console.WriteLine("Enter First Name of the Contact you want to Delete:");
             string name = Console.ReadLine();
@@ -122,7 +98,6 @@ namespace AddressBookTrail
                     break;
                 }
             }
-
         }
         public void DuplicateChecker()
         {
@@ -182,3 +157,5 @@ namespace AddressBookTrail
         }
     }
 }
+
+   

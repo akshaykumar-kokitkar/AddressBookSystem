@@ -172,6 +172,25 @@ namespace AddressBookTrail
                 }
             }
         }
+
+        public void FindNumOfPerson()
+        {
+            Console.WriteLine("Enter City or State ::");
+            string cityState = Console.ReadLine();
+            int countPerson = 0;
+            foreach (var element in DictName)
+            {
+                if (element.Value.City.Equals(cityState))
+                {
+                    countPerson++;
+                }
+                if (element.Value.State.Equals(cityState))
+                {
+                    countPerson++;
+                }
+            }
+            Console.WriteLine("\nNumber of Person found in " + cityState + " are " + countPerson);
+        }
     }
 }
 

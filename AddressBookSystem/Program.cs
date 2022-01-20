@@ -7,7 +7,7 @@ namespace AddressBookTrail
         static void Main(string[] args)
         {
             Console.WriteLine("Hello! Welcome to Address Book.");
-            Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Duplicate Checker.\n6.Search Person.\n7.Find City/State.\n8.Find Number Of Persons.\n9.Exit Adress Book Application.\n=================================");
+            Console.WriteLine("=================================\nChoose the operation:\n1.Add Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Duplicate Checker.\n6.Search Person.\n7.Find City/State.\n8.Find Number Of Persons..\n9.Sort By Person Name\n10.Exit Adress Book Application.\n=================================");
             var userInput = Console.ReadLine();
             var addressBook = new AddressBook();
 
@@ -40,13 +40,16 @@ namespace AddressBookTrail
                         addressBook.FindNumOfPerson();
                         break;
                     case "9":
+                        addressBook.SortByPersonName();
+                        break;
+                    case "10":
                         return;
                     default:
                         Console.WriteLine("!!! Choose valid operation !!!");
                         break;
                 }
-                Console.WriteLine("=================================\nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Duplicate Checker.\n6.Search Person.\n7.FindCity/State.\n8.Find Number Of Persons.\n9.Exit Address Book Application \n=================================");
-                userInput = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("=================================\nChoose the operation:\n1.Add Another Contact.\n2.View Saved Contacts.\n3.Edit Existing Contact.\n4.Delete Existing Contact.\n5.Duplicate Checker.\n6.Search Person.\n7.FindCity/State.\n8.Find Number Of Persons..\n9.Sort By Person Name.\n10.Exit Address Book Application.\n=================================");
+                userInput = Console.ReadLine();
             }
         }
     }

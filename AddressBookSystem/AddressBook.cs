@@ -155,7 +155,6 @@ namespace AddressBookTrail
                 }
             }
         }
-
         public void FindCityState()
         {
             Console.WriteLine("Enter First Name of a Person to View his City and State::");
@@ -172,7 +171,6 @@ namespace AddressBookTrail
                 }
             }
         }
-
         public void FindNumOfPerson()
         {
             Console.WriteLine("Enter City or State ::");
@@ -190,6 +188,14 @@ namespace AddressBookTrail
                 }
             }
             Console.WriteLine("\nNumber of Person found in " + cityState + " are " + countPerson);
+        }
+        public void SortByPersonName()
+        {
+            Dictionary<string, Contact> sortList = DictName.OrderBy(x => x.Value.FirstName).ToDictionary(x => x.Key, x => x.Value);
+            foreach (var element in sortList)
+            {
+                Console.WriteLine(element.Value.FirstName + " " + element.Value.LastName + " " + element.Value.PhoneNumber);
+            }
         }
     }
 }

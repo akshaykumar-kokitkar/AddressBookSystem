@@ -1,5 +1,5 @@
 ﻿using System;
-
+using AddressBookSystem;
 
 namespace AddressBookTrail
 {
@@ -236,6 +236,10 @@ namespace AddressBookTrail
         public void ConvertToCsv()
         {
             FileIO.WriteDataToCSV(DictName);
+        }
+        public void ConvertToJson()
+        {
+            Json.WriteToJson(DictName);
         }
     }
 }

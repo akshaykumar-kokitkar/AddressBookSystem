@@ -13,3 +13,5 @@ C:\Users\ak\Desktop\BridgeLabz Project\AddressBookSystem\AddressBookSystem\obj\D
 C:\Users\ak\Desktop\BridgeLabz Project\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\ref\AddressBookSystem.dll
 C:\Users\ak\Desktop\BridgeLabz Project\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.pdb
 C:\Users\ak\Desktop\BridgeLabz Project\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.genruntimeconfig.cache
+C:\Users\ak\Desktop\BridgeLabz Project\AddressBookSystem\AddressBookSystem\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\ak\Desktop\BridgeLabz Project\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.csproj.CopyComplete
